@@ -1,0 +1,71 @@
+import networkx as nx
+from numpy import random as rd
+import numpy as np
+
+def computeZfromGraph(seeds,G,a=0.01,b=0.1):
+    
+  def f(G,seeds,z):
+    
+    k=0.
+    for seed in seeds:
+      H=nx.DiGraph(G)
+      y1=G.node[seed]['fitness']
+      H.remove_node(seed)
+      for j in H.nodes():
+             y2=G.node[j]['fitness']
+             k+=z*y1*y2/(1+z*y1*y2)  
+      k+=-nx.Graph(G).degree()[seed]
+    
+    return k
+    
+  if sum(nx.degree(G,seeds).values())==0:
+      return 0.
+      
+  f_a=f(G,seeds,a)
+  f_b=f(G,seeds,b)
+  
+  count=0
+  while f_a*f_b>0 and count<=100: 
+       count+=1
+       if f_a>0:
+          b=a 
+          a/=10.
+       if f_a<0:
+          a=b
+          b*=10.
+       f_a=f(G,seeds,a)
+       f_b=f(G,seeds,b)
+  
+  c=(a+b)/2    
+  while (b-a)>pow(10,np.log(c)/np.log(10.)-2):
+      c=(a+b)/2
+      if f(G,seeds,c)==0.:
+        return c
+      else:
+        if f(G,seeds,c)*f(G,seeds,a)<=0:
+           b=c
+        if f(G,seeds,c)*f(G,seeds,b)<=0:
+           a=c
+    
+  return c
+  
+  
+def fitModelz(G,z):
+ 
+         H=G.nodes()
+         l=G.nodes()
+         G0=nx.Graph()
+         G0.add_nodes_from(G)
+                   
+         for i in l:
+           H.remove(i)
+           G0.node[i]['fitness']=G.node[i]['fitness']
+           y1=G.node[i]['fitness']
+           for j in H:
+              y2=G.node[j]['fitness']
+              p_i_j=z*y1*y2/(1+z*y1*y2)
+              coin=rd.binomial(1, p_i_j)
+              if coin==1 and (not G0.has_edge(i,j)):
+                 G0.add_edge(i,j) #a ogni link un peso uguale
+         
+         return G0
