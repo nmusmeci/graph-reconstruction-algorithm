@@ -9,4 +9,5 @@ The complete topology is reconstructed by running a "fitness model" [2] whose ma
 
 References:
 [1] N. Musmeci, S. Battiston, G. Caldarelli, A. Gabrielli, M. Puliga: “Bootstrapping topology and systemic risk of Complex Networks using the Fitness Model ”, Journal of Statistical Physics (2013)
+
 [2] Caldarelli, G., Capocci, A., De Los Rios, P., Munoz, M.: "Scale-free networks from varying vertex intrinsic fitness". Physical review letters 89 (25), 258,702 (2002)
