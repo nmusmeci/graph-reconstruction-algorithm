@@ -1,4 +1,4 @@
-# Network-reconstruction-algorithm-
+# network-reconstruction-algorithm-
 Algorithm that reconstructs missing connections of a network starting from a limited amount of information. I invented this technique as part of my Master degree's thesis in Statistical Physics. We demonstrated its predictive power in a number of real-world applications, such as interbank lending and world trade networks, in peer-reviewed scientific papers [1,2].
 
 The algorithm takes as input the following variables:
