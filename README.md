@@ -13,8 +13,8 @@ The missing connections are reconstructed by running a "fitness model" [3] whose
 ---
 References:
 
-[1] N. Musmeci, S. Battiston, G. Caldarelli, A. Gabrielli, M. Puliga: “Bootstrapping topology and systemic risk of Complex Networks using the Fitness Model ”, Journal of Statistical Physics (2013) https://link.springer.com/article/10.1007/s10955-013-0720-1 (pdf from arxiv: https://arxiv.org/pdf/1209.6459.pdf) 
+[1] N. Musmeci, S. Battiston, G. Caldarelli, A. Gabrielli, M. Puliga: “[Bootstrapping topology and systemic risk of Complex Networks using the Fitness Model](https://link.springer.com/article/10.1007/s10955-013-0720-1)”, Journal of Statistical Physics (2013) ([pdf from arxiv](https://arxiv.org/pdf/1209.6459.pdf)) 
 
-[2] G. Cimini, T. Squartini, N. Musmeci, M. Puliga, A. Gabrielli, D. Garlaschelli, S. Battiston, G. Caldarelli: "Reconstructing topological properties of complex networks using the fitness model", International Conference on Social Informatics (2015) https://link.springer.com/chapter/10.1007/978-3-319-15168-7_41 (pdf from arxiv: https://arxiv.org/pdf/1410.2121.pdf)
+[2] G. Cimini, T. Squartini, N. Musmeci, M. Puliga, A. Gabrielli, D. Garlaschelli, S. Battiston, G. Caldarelli: "[Reconstructing topological properties of complex networks using the fitness model](https://link.springer.com/chapter/10.1007/978-3-319-15168-7_41)", International Conference on Social Informatics (2015) ([pdf from arxiv](https://arxiv.org/pdf/1410.2121.pdf))
 
 [3] Caldarelli, G., Capocci, A., De Los Rios, P., Munoz, M.: "Scale-free networks from varying vertex intrinsic fitness". Physical review letters 89 (25), 258,702 (2002)
